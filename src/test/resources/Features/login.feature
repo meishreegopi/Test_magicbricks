@@ -1,5 +1,5 @@
-Feature: Contacting the Interior Designer
-Scenario Outline: Get the details of the commercial property\
+Feature: Contacting the Interior Designer for home interior design
+Scenario Outline: Get the details of the Interior Design
 Scenario: Login successful
 Given I launch the magicbricks website
 And I am on the homepage
