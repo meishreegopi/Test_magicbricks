@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Sep 07 22:53:17 IST 2025</td>
+<td>Started on:</td><td>Tue Sep 09 08:13:08 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>6 seconds (6122 ms)</td>
+<tr><td>Total time:</td><td>142 seconds (142025 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,59 +76,23 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login successful", "Contacting the Interior Designer for home interior design"</td>
-<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=139.0.7258.155)
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [874881f3fa43958c7bff9c87bb21990f, clickElement {id=f.082C4A870D2F17CCE6B69C95C2FDA7BF.d.BB7C51E2A1A1EB16938119029F555C92.e.65}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\MEISHR~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49906}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49906/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (874881f3fa43958c7bff9c87bb21990f)] -&gt; xpath: //*[@id=&quot;commercialIndex&quot;]/header/section[1]/div/div[2]/div[2]/div/div[2]/a]
-Session ID: 874881f3fa43958c7bff9c87bb21990f
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at com.pages.LoginPage.clickinnerloginBtn(LoginPage.java:26)
-	at com.stepDefinition.Profile.i_click_on_the_login_button(Profile.java:24)
-	at ✽.I click on the login button(file:///C:/Users/MEISHREE%20GOPI/OneDrive/Desktop/CapGeminiTesting/magicbricks_test/src/test/resources/Features/login.feature:6)
-</pre></div><a href='#' onClick='toggleBox("stack-trace34757331", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace34757331'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=139.0.7258.155)
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [874881f3fa43958c7bff9c87bb21990f, clickElement {id=f.082C4A870D2F17CCE6B69C95C2FDA7BF.d.BB7C51E2A1A1EB16938119029F555C92.e.65}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\MEISHR~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49906}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49906/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (874881f3fa43958c7bff9c87bb21990f)] -&gt; xpath: //*[@id=&quot;commercialIndex&quot;]/header/section[1]/div/div[2]/div[2]/div/div[2]/a]
-Session ID: 874881f3fa43958c7bff9c87bb21990f
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at com.pages.LoginPage.clickinnerloginBtn(LoginPage.java:26)
-	at com.stepDefinition.Profile.i_click_on_the_login_button(Profile.java:24)
-	at ✽.I click on the login button(file:///C:/Users/MEISHREE%20GOPI/OneDrive/Desktop/CapGeminiTesting/magicbricks_test/src/test/resources/Features/login.feature:6)
+<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search and validate property listings by location", "Magicbricks Property Search"</td>
+<td><div><pre>java.lang.AssertionError: Failed to select budget from dropdown expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.stepDefinition.searchHome.the_user_selects_a_budget_range_from_the_dropdown(searchHome.java:41)
+	at ✽.the user selects a budget range from the dropdown(file:///C:/Users/MEISHREE%20GOPI/OneDrive/Desktop/CapGeminiTesting/magicbricks_test/src/test/resources/Features/search.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace345703799", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace345703799'><pre>java.lang.AssertionError: Failed to select budget from dropdown expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.stepDefinition.searchHome.the_user_selects_a_budget_range_from_the_dropdown(searchHome.java:41)
+	at ✽.the user selects a budget range from the dropdown(file:///C:/Users/MEISHREE%20GOPI/OneDrive/Desktop/CapGeminiTesting/magicbricks_test/src/test/resources/Features/search.feature:7)
 </pre></div></td>
-<td>5</td>
-<td>com.runner.TestRunnerTestNG@77f1baf5</td></tr>
+<td>19</td>
+<td>com.runner.TestRunnerTestNG@7817fd62</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -139,10 +103,15 @@ Session ID: 874881f3fa43958c7bff9c87bb21990f
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Get the details of the Interior Design", "Contacting the Interior Designer for home interior design"</td>
+<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valid user login successfully", "Test Buying a property"</td>
 <td></td>
-<td>0</td>
-<td>com.runner.TestRunnerTestNG@77f1baf5</td></tr>
+<td>83</td>
+<td>com.runner.TestRunnerTestNG@7817fd62</td></tr>
+<tr>
+<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Get the details of the property and owner successfully", "Test Buying a property"</td>
+<td></td>
+<td>3</td>
+<td>com.runner.TestRunnerTestNG@7817fd62</td></tr>
 </table><p>
 </body>
 </html>

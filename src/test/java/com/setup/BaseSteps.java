@@ -1,39 +1,29 @@
 package com.setup;
 
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseSteps {
-    protected static WebDriver driver;
+    
+    public static WebDriver driver;  // shared driver
+    public final static int TIME = 3000;
 
     public static void launchBrowser() {
-        if (driver == null) {
-            driver = new ChromeDriver();   // initialize driver
-            driver.manage().window().maximize();
-        }
-        driver.get("https://www.magicbricks.com");  // open URL
-    }
-
-    public static WebDriver getDriver() {
-        return driver;
-    }
-
-    public static void quitDriver() {
-        if (driver != null) {
-            driver.quit();
-            driver = null;
+        if (driver == null) {   // avoid multiple launches
+            Properties prop = PropertyReader.readProperties();
+            driver = new ChromeDriver();
+            driver.manage().window().maximize(); 
+            driver.get(prop.getProperty("URL"));
         }
     }
-
-
-		public static void sleep() {
-		    try {
-		        Thread.sleep(2000); // 2 seconds wait
-		    } catch (InterruptedException e) {
-		        Thread.currentThread().interrupt();
-		    }
-		}
-
-		
-	}
-
+    
+    public static void sleep() {
+        try {
+            Thread.sleep(TIME);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
