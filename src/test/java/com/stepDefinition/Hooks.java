@@ -21,12 +21,12 @@ public class Hooks extends BaseSteps {
 
     @BeforeAll
     public static void setUpReportsAndBrowser() {
-        // Setup reports
+        //  Setup reports
         spark = new ExtentSparkReporter("reports\\ExtentReports.html");
         extReports = new ExtentReports();
         extReports.attachReporter(spark);
 
-        // Launch browser once for all features
+        //  Launch browser once for all features
         if (driver == null) {
             launchBrowser();
             System.out.println("Browser launched once via @BeforeAll ");
@@ -54,7 +54,7 @@ public class Hooks extends BaseSteps {
     public static void afterAll() {
         if (driver != null) {
             driver.quit();
-            System.out.println("Browser closed after all tests ✅");
+            System.out.println("Browser closed after all tests ");
         }
         extReports.flush();
     }

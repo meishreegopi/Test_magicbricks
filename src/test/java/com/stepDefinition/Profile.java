@@ -17,7 +17,6 @@ public class Profile extends BaseSteps {
 
     @Given("I launch the magicbricks website")
     public void i_launch_the_magicbricks_website() {
-        // ✅ browser already launched in Hooks
         System.out.println("Browser launched via Hooks and Magicbricks website opened.");
     }
 
