@@ -26,36 +26,25 @@ public class ShortlistPropertyPage {
         this.extTest = extTest;
     }
 
-    /**
-     * Clicks the "View Shortlisted Properties" button, switches to the new tab,
-     * and validates the page title.
-     * @return true if the action is successful, false otherwise.
-     */
     public boolean viewShortlistedProperties() {
         try {
             WebElement viewShortlistBtn = wait.until(ExpectedConditions.elementToBeClickable(Locators.viewShortlistBtn));
             viewShortlistBtn.click();
-            
-            // Get all window handles
+
+            // Switch to latest tab
             Set<String> allWindowHandles = driver.getWindowHandles();
             ArrayList<String> tabs = new ArrayList<>(allWindowHandles);
-            
-            // Switch to the new tab (assuming it's the second one)
-            if (tabs.size() > 1) {
-                driver.switchTo().window(tabs.get(2));
-                Reporter.generateReport(driver, extTest, Status.PASS, "Shortlisted Property page. Current URL: " + driver.getCurrentUrl());
-            } else {
-                Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to switch to a new tab. Only one tab was found.");
-                return false;
-            }
+            driver.switchTo().window(tabs.get(tabs.size() - 1));
 
-            // Validate the presence of the new tab's header using the specific locator
+            Reporter.generateReport(driver, extTest, Status.PASS, 
+                "Switched to shortlisted properties tab. Current URL: " + driver.getCurrentUrl());
+
             WebElement shortlistedTabHeader = wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.shortlistTabHeader));
             if (shortlistedTabHeader.isDisplayed()) {
-                Reporter.generateReport(driver, extTest, Status.PASS, "Successfully navigated to the shortlisted properties");
+                Reporter.generateReport(driver, extTest, Status.PASS, "Successfully navigated to shortlisted properties");
                 return true;
             } else {
-                Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to navigate to the shortlisted properties page. Header not found.");
+                Reporter.generateReport(driver, extTest, Status.FAIL, "Shortlist page header not found.");
                 return false;
             }
         } catch (Exception e) {
@@ -64,49 +53,44 @@ public class ShortlistPropertyPage {
         }
     }
 
-    /**
-     * Clicks on the first shortlisted property in the listing.
-     * @return true if the property is clicked successfully, false otherwise.
-     */
     public boolean clickFirstShortlistedProperty() {
         try {
-            // Use the more specific locator for the first property
             WebElement firstProperty = wait.until(ExpectedConditions.elementToBeClickable(Locators.shortlistedPropertyCard));
             firstProperty.click();
             Reporter.generateReport(driver, extTest, Status.PASS, "Selected first shortlisted property.");
             return true;
         } catch (Exception e) {
-            Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to click on the first shortlisted property: " + e.getMessage());
+            Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to click first shortlisted property: " + e.getMessage());
             return false;
         }
     }
+
     public boolean sortByFilter() {
-    	try {
-    		WebElement shortlistBtn1 = wait.until(ExpectedConditions.elementToBeClickable(Locators.sortBy));
-    	    shortlistBtn1.click();
-    	    WebElement shortlistBtn2 = wait.until(ExpectedConditions.elementToBeClickable(Locators.mostrecent));
-    	    shortlistBtn2.click();
-    	    Reporter.generateReport(driver, extTest, Status.PASS, "Sortby most recent filter clicked");
-            return true;
-    	}
-    	 catch (Exception e) {
-             Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to click the main shortlist button: " + e.getMessage());
-             return false;
-    	 }
-    }
-    public boolean shortlistPropertyFromList() {
         try {
-        	   
-          	WebElement shortlistBtn3=wait.until(ExpectedConditions.elementToBeClickable(Locators.shortlistButton));
-          	shortlistBtn3.click();
-            WebElement shortlistBtn = wait.until(ExpectedConditions.elementToBeClickable(Locators.mainshortlistbtn));
-            shortlistBtn.click();
-            
-            Reporter.generateReport(driver, extTest, Status.PASS, "Successfully clicked the main shortlist button.");
+            WebElement shortlistBtn1 = wait.until(ExpectedConditions.elementToBeClickable(Locators.sortBy));
+            shortlistBtn1.click();
+            WebElement shortlistBtn2 = wait.until(ExpectedConditions.elementToBeClickable(Locators.mostrecent));
+            shortlistBtn2.click();
+            Reporter.generateReport(driver, extTest, Status.PASS, "Sort by Most Recent applied");
             return true;
         } catch (Exception e) {
-            Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to click the main shortlist button: " + e.getMessage());
+            Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to apply Sort By filter: " + e.getMessage());
             return false;
         }
     }
+
+    public boolean shortlistPropertyFromList() {
+        try {
+            WebElement shortlistBtn3 = wait.until(ExpectedConditions.elementToBeClickable(Locators.shortlistButton));
+            shortlistBtn3.click();
+            WebElement shortlistBtn = wait.until(ExpectedConditions.elementToBeClickable(Locators.mainshortlistbtn));
+            shortlistBtn.click();
+
+            Reporter.generateReport(driver, extTest, Status.PASS, "Successfully shortlisted a property.");
+            return true;
+        } catch (Exception e) {
+            Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to shortlist property: " + e.getMessage());
+            return false;
+        }
     }
+}

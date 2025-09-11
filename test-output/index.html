@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\MEISHREE GOPI\AppData\Local\Temp\testng-eclipse--893579874\testng-customsuite.xml</span>
+                    <span>C:\Users\MEISHREE GOPI\AppData\Local\Temp\testng-eclipse-73893186\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">8 methods, 3 failed,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.runner.TestRunnerTestNG" class="method navigator-link" hash-for-method="runScenario(&quot;Login without entering any credentials&quot;, &quot;Invalid Login Scenarios&quot;)">runScenario("Login without entering any credentials", "Invalid Login Scenarios")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.runner.TestRunnerTestNG" class="method navigator-link" hash-for-method="runScenario(&quot;Verify user can navigate to Home Interiors Design Services from listing page&quot;, &quot;Navigate to Home In...)">runScenario("Verify user can navigate to Home Interiors Design Services from listing page", "Navigate to Home In...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.runner.TestRunnerTestNG" class="method navigator-link" hash-for-method="runScenario(&quot;Login with invalid mobile number&quot;, &quot;Invalid Login Scenarios&quot;)">runScenario("Login with invalid mobile number", "Invalid Login Scenarios")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +127,22 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.runner.TestRunnerTestNG" class="method navigator-link" hash-for-method="runScenario(&quot;Login with invalid mobile number&quot;, &quot;Invalid Login Scenarios&quot;)">runScenario("Login with invalid mobile number", "Invalid Login Scenarios")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.runner.TestRunnerTestNG" class="method navigator-link" hash-for-method="runScenario(&quot;Get the details of the property and owner successfully&quot;, &quot;Test Buying a property&quot;)">runScenario("Get the details of the property and owner successfully", "Test Buying a property")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.runner.TestRunnerTestNG" class="method navigator-link" hash-for-method="runScenario(&quot;Valid user login successfully&quot;, &quot;Test Buying a property&quot;)">runScenario("Valid user login successfully", "Test Buying a property")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.runner.TestRunnerTestNG" class="method navigator-link" hash-for-method="runScenario(&quot;Search and validate property listings by location&quot;, &quot;Magicbricks Property Search&quot;)">runScenario("Search and validate property listings by location", "Magicbricks Property Search")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.runner.TestRunnerTestNG" class="method navigator-link" hash-for-method="runScenario(&quot;Verify shortlisting a property from the listing results&quot;, &quot;Shortlist property from listing page&quot;)">runScenario("Verify shortlisting a property from the listing results", "Shortlist property from listing page")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -123,6 +162,72 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.runner.TestRunnerTestNG</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Login without entering any credentials&quot;, &quot;Invalid Login Scenarios&quot;)">
+                  </a> <!-- runScenario("Login without entering any credentials", "Invalid Login Scenarios") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Login without entering any credentials","Invalid Login Scenarios")</span>
+                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &apos;I should see an error message for mandatory fields&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then(&quot;I should see an error message for mandatory fields&quot;)
+public void i_should_see_an_error_message_for_mandatory_fields() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.I should see an error message for mandatory fields(file:///C:/Users/MEISHREE%20GOPI/OneDrive/Desktop/CapGeminiTesting/magicbricks_test/src/test/resources/Features/InvalidLogin.feature:32)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify user can navigate to Home Interiors Design Services from listing page&quot;, &quot;Navigate to Home In...)">
+                  </a> <!-- runScenario("Verify user can navigate to Home Interiors Design Services from listing page", "Navigate to Home In...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify user can navigate to Home Interiors Design Services from listing page","Navigate to Home Interiors Design Services")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Failed to click Select your city expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.stepDefinition.HomeInteriorsSteps.the_user_click_on_select_your_city(HomeInteriorsSteps.java:44)
+	at ✽.the user click on select your city(file:///C:/Users/MEISHREE%20GOPI/OneDrive/Desktop/CapGeminiTesting/magicbricks_test/src/test/resources/Features/5_HomeInteriors.feature:8)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Login with invalid mobile number&quot;, &quot;Invalid Login Scenarios&quot;)">
+                  </a> <!-- runScenario("Login with invalid mobile number", "Invalid Login Scenarios") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Login with invalid mobile number","Invalid Login Scenarios")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Failed at login -&gt; clickInnerLoginBtn() expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.stepDefinition.Invalid.i_click_the_inner_login_button(Invalid.java:54)
+	at ✽.I click the inner login button(file:///C:/Users/MEISHREE%20GOPI/OneDrive/Desktop/CapGeminiTesting/magicbricks_test/src/test/resources/Features/InvalidLogin.feature:6)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -131,10 +236,40 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Login with invalid mobile number&quot;, &quot;Invalid Login Scenarios&quot;)">
-                  </a> <!-- runScenario("Login with invalid mobile number", "Invalid Login Scenarios") -->
+                  <a name="runScenario(&quot;Get the details of the property and owner successfully&quot;, &quot;Test Buying a property&quot;)">
+                  </a> <!-- runScenario("Get the details of the property and owner successfully", "Test Buying a property") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Login with invalid mobile number","Invalid Login Scenarios")</span>
+                  <span class="parameters">("Get the details of the property and owner successfully","Test Buying a property")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Valid user login successfully&quot;, &quot;Test Buying a property&quot;)">
+                  </a> <!-- runScenario("Valid user login successfully", "Test Buying a property") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Valid user login successfully","Test Buying a property")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Search and validate property listings by location&quot;, &quot;Magicbricks Property Search&quot;)">
+                  </a> <!-- runScenario("Search and validate property listings by location", "Magicbricks Property Search") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Search and validate property listings by location","Magicbricks Property Search")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify shortlisting a property from the listing results&quot;, &quot;Shortlist property from listing page&quot;)">
+                  </a> <!-- runScenario("Verify shortlisting a property from the listing results", "Shortlist property from listing page") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify shortlisting a property from the listing results","Shortlist property from listing page")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -154,7 +289,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\MEISHREE GOPI\AppData\Local\Temp\testng-eclipse--893579874\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\MEISHREE GOPI\AppData\Local\Temp\testng-eclipse-73893186\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -211,20 +346,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.runner.TestRunnerTestNG')
-data.setCell(0, 3, 13245);
+data.setCell(0, 3, 80781);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'com.runner.TestRunnerTestNG')
-data.setCell(1, 3, 11586);
+data.setCell(1, 3, 30052);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'com.runner.TestRunnerTestNG')
+data.setCell(2, 3, 26201);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'com.runner.TestRunnerTestNG')
+data.setCell(3, 3, 24265);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'com.runner.TestRunnerTestNG')
+data.setCell(4, 3, 17474);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'com.runner.TestRunnerTestNG')
+data.setCell(5, 3, 14952);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'com.runner.TestRunnerTestNG')
+data.setCell(6, 3, 7859);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'runScenario')
+data.setCell(7, 2, 'com.runner.TestRunnerTestNG')
+data.setCell(7, 3, 3224);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 24 seconds</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -252,20 +411,50 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.runner.TestRunnerTestNG</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@3c0e00a8)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@6eede35e)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <span class="method-name">runScenario("Get the details of the property and owner successfully", "Test Buying a property")</span>
+                <span class="method-start">7832 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Valid user login successfully", "Test Buying a property")</span>
+                <span class="method-start">11063 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Search and validate property listings by location", "Magicbricks Property Search")</span>
+                <span class="method-start">91848 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify shortlisting a property from the listing results", "Shortlist property from listing page")</span>
+                <span class="method-start">118052 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify user can navigate to Home Interiors Design Services from listing page", "Navigate to Home In...)</span>
+                <span class="method-start">125916 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario("Login with invalid mobile number", "Invalid Login Scenarios")</span>
-                <span class="method-start">5128 ms</span>
+                <span class="method-start">150186 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login with missing captcha", "Invalid Login Scenarios")</span>
-                <span class="method-start">16717 ms</span>
+                <span class="method-start">180243 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Login without entering any credentials", "Invalid Login Scenarios")</span>
+                <span class="method-start">197720 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">29967 ms</span>
+                <span class="method-start">212677 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

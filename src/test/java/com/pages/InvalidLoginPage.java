@@ -199,7 +199,51 @@ public class InvalidLoginPage {
             extTest.log(Status.FAIL, "No error message found for captcha");
             return false;
         }
- 
+    }
+
+
+    public boolean getMandatoryFieldErrorMessage() {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            WebElement errorElement = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[contains(text(),'required') or contains(text(),'mandatory')]")
+            ));
+
+            String actualError = errorElement.getText().trim().toLowerCase();
+            System.out.println("Captured mandatory field error: " + actualError);
+
+            List<String> expectedErrors = Arrays.asList(
+                "required", 
+                "mandatory", 
+                "cannot be empty"
+            );
+
+            boolean matched = expectedErrors.stream().anyMatch(actualError::contains);
+            if (matched) {
+                extTest.log(Status.PASS, "Mandatory field error displayed: " + actualError);
+            } else {
+                extTest.log(Status.FAIL, "Unexpected mandatory error: " + actualError);
+            }
+            return matched;
+        } catch (Exception e) {
+            extTest.log(Status.FAIL, "No error message found for mandatory field");
+            return false;
+        }
+    }
+    public boolean validateMandatoryFieldMessage(By locator, String expectedMsg) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+            WebElement field = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+
+            // Get browser-native validation message
+            String actualMsg = field.getAttribute("validationMessage");
+            System.out.println("Validation message from browser: " + actualMsg);
+
+            return actualMsg != null && actualMsg.contains(expectedMsg);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
 

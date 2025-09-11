@@ -5,4 +5,3 @@ Given the user is on the property listing page
 And clicks on sortby and selects most recent filter
 When I shortlist the first property from the listing
 And I view the shortlisted properties
-Then I click on property

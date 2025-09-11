@@ -23,5 +23,11 @@ Feature: Invalid Login Scenarios
     Examples:
       | phone      |
       | 9940114678 |
-
+Scenario: Login without entering any credentials
+    Given I am on the homepage of magicbricks
+    When I click on the login button of home page
+    And I click the inner login button
+    And I am redirected to the login page 
+    And I try to proceed without entering details
+    Then I should see an error message for mandatory fields
  

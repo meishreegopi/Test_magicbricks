@@ -21,10 +21,14 @@ public class Hooks extends BaseSteps {
 
     @BeforeAll
     public static void setUpReportsAndBrowser() {
-        //  Setup reports
-        spark = new ExtentSparkReporter("reports\\ExtentReports.html");
+        //  Setup reports (✅ changed path here)
+        spark = new ExtentSparkReporter("reports/ExtentReports.html");
         extReports = new ExtentReports();
         extReports.attachReporter(spark);
+
+        // Debug log to check exact location
+        System.out.println("ExtentReport will be saved at: " + 
+            new File("reports/ExtentReports.html").getAbsolutePath());
 
         //  Launch browser once for all features
         if (driver == null) {
@@ -49,14 +53,16 @@ public class Hooks extends BaseSteps {
         }
     }
 
-
     @AfterAll
     public static void afterAll() {
         if (driver != null) {
             driver.quit();
             System.out.println("Browser closed after all tests ");
         }
-        extReports.flush();
+        if (extReports != null) {   // ✅ added null check to ensure flush runs safely
+            extReports.flush();
+            System.out.println("Extent report generated!");
+        }
     }
 
     @Before

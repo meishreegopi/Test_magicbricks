@@ -9,6 +9,4 @@ Feature: Magicbricks Property Search
     Then the user should be redirected to the property listing page
     
 
-  Examples:
-    | location   |
-    | Chennai  |
+ 

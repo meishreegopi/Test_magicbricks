@@ -1,4 +1,8 @@
 package com.stepDefinition;
+
+
+import java.util.Scanner;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -20,7 +24,7 @@ public class Invalid extends BaseSteps {
     public void startBrowser() {
         launchBrowser();
         driver.get("https://www.magicbricks.com/");
-        System.out.println("🔄 Browser launched fresh for InvalidLogin scenario");
+        System.out.println("Browser launched fresh for InvalidLogin scenario");
     }
 
     @After("@InvalidLogin")
@@ -28,7 +32,7 @@ public class Invalid extends BaseSteps {
         if (driver != null) {
             driver.quit();
             driver = null;
-            System.out.println("✅ Browser closed after InvalidLogin scenario");
+            System.out.println(" Browser closed after InvalidLogin scenario");
         }
     }
 
@@ -79,5 +83,22 @@ public class Invalid extends BaseSteps {
     @Then("I should see an error message for captcha")
     public void i_should_see_error_message_for_captcha() {
         Assert.assertTrue(invalidLoginPage.getCaptchaErrorMessage(), "Expected error not displayed for captcha");
+    }
+ 
+    @When("I try to proceed without entering details")
+    public void i_try_to_proceed_without_entering_details() {
+        boolean actResult = invalidLoginPage.clickNextWithoutDetails();
+        Assert.assertTrue(actResult, "Failed at invalid login -> clickNextWithoutDetails()");
+    }
+    
+    @Then("I should see an error message for mandatory fields")
+    public void i_should_see_error_message_for_mandatory_fields() {
+    	  By mobileField = By.id("emailOrMobile");  
+
+    	    boolean actResult = invalidLoginPage.validateMandatoryFieldMessage(
+    	        mobileField,
+    	        "Please fill out this field"
+    	    );
+    	    Assert.assertTrue(actResult, "Expected error not displayed for mandatory fields");
     }
 }
