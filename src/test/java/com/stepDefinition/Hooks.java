@@ -18,6 +18,9 @@ public class Hooks extends BaseSteps {
     static ExtentSparkReporter spark;
     static ExtentReports extReports;
     public static ExtentTest extTest;
+    public static int currentrow = 0;
+
+   	public static int firstrow;
 
     @BeforeAll
     public static void setUpReportsAndBrowser() {

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>5/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Sep 11 22:22:44 IST 2025</td>
+<td>Started on:</td><td>Sat Sep 13 00:20:49 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>213 seconds (213337 ms)</td>
+<tr><td>Total time:</td><td>323 seconds (323102 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,66 +76,22 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login without entering any credentials", "Invalid Login Scenarios"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;I should see an error message for mandatory fields&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;I should see an error message for mandatory fields&quot;)
-public void i_should_see_an_error_message_for_mandatory_fields() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.I should see an error message for mandatory fields(file:///C:/Users/MEISHREE%20GOPI/OneDrive/Desktop/CapGeminiTesting/magicbricks_test/src/test/resources/Features/InvalidLogin.feature:32)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2134639513", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2134639513'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;I should see an error message for mandatory fields&apos; is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then(&quot;I should see an error message for mandatory fields&quot;)
-public void i_should_see_an_error_message_for_mandatory_fields() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.I should see an error message for mandatory fields(file:///C:/Users/MEISHREE%20GOPI/OneDrive/Desktop/CapGeminiTesting/magicbricks_test/src/test/resources/Features/InvalidLogin.feature:32)
+<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can navigate to a designer profile from designers page", "Navigate to Home Interiors Design Services"</td>
+<td><div><pre>java.lang.AssertionError: Home Interiors Designers page was not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.stepDefinition.HomeInteriorsSteps.the_user_should_be_displayed_home_interiors_designers_page(HomeInteriorsSteps.java:42)
+	at ✽.the user should be displayed Home Interiors Designers page(file:///C:/Users/MEISHREE%20GOPI/OneDrive/Desktop/CapGeminiTesting/magicbricks_test/src/test/resources/Features/6_HomeInteriors.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace47710680", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace47710680'><pre>java.lang.AssertionError: Home Interiors Designers page was not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.stepDefinition.HomeInteriorsSteps.the_user_should_be_displayed_home_interiors_designers_page(HomeInteriorsSteps.java:42)
+	at ✽.the user should be displayed Home Interiors Designers page(file:///C:/Users/MEISHREE%20GOPI/OneDrive/Desktop/CapGeminiTesting/magicbricks_test/src/test/resources/Features/6_HomeInteriors.feature:8)
 </pre></div></td>
-<td>14</td>
-<td>com.runner.TestRunnerTestNG@63475ace</td></tr>
-<tr>
-<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can navigate to Home Interiors Design Services from listing page", "Navigate to Home Interiors Design Services"</td>
-<td><div><pre>java.lang.AssertionError: Failed to click Select your city expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.stepDefinition.HomeInteriorsSteps.the_user_click_on_select_your_city(HomeInteriorsSteps.java:44)
-	at ✽.the user click on select your city(file:///C:/Users/MEISHREE%20GOPI/OneDrive/Desktop/CapGeminiTesting/magicbricks_test/src/test/resources/Features/5_HomeInteriors.feature:8)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1887218054", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1887218054'><pre>java.lang.AssertionError: Failed to click Select your city expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.stepDefinition.HomeInteriorsSteps.the_user_click_on_select_your_city(HomeInteriorsSteps.java:44)
-	at ✽.the user click on select your city(file:///C:/Users/MEISHREE%20GOPI/OneDrive/Desktop/CapGeminiTesting/magicbricks_test/src/test/resources/Features/5_HomeInteriors.feature:8)
-</pre></div></td>
-<td>24</td>
-<td>com.runner.TestRunnerTestNG@63475ace</td></tr>
-<tr>
-<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with invalid mobile number", "Invalid Login Scenarios"</td>
-<td><div><pre>java.lang.AssertionError: Failed at login -&gt; clickInnerLoginBtn() expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.stepDefinition.Invalid.i_click_the_inner_login_button(Invalid.java:54)
-	at ✽.I click the inner login button(file:///C:/Users/MEISHREE%20GOPI/OneDrive/Desktop/CapGeminiTesting/magicbricks_test/src/test/resources/Features/InvalidLogin.feature:6)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1067155425", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1067155425'><pre>java.lang.AssertionError: Failed at login -&gt; clickInnerLoginBtn() expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.stepDefinition.Invalid.i_click_the_inner_login_button(Invalid.java:54)
-	at ✽.I click the inner login button(file:///C:/Users/MEISHREE%20GOPI/OneDrive/Desktop/CapGeminiTesting/magicbricks_test/src/test/resources/Features/InvalidLogin.feature:6)
-</pre></div></td>
-<td>30</td>
+<td>27</td>
 <td>com.runner.TestRunnerTestNG@63475ace</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -147,14 +103,19 @@ public void i_should_see_an_error_message_for_mandatory_fields() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Get the details of the property and owner successfully", "Test Buying a property"</td>
+<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with invalid mobile number", "Invalid Login Scenarios"</td>
 <td></td>
-<td>3</td>
+<td>12</td>
 <td>com.runner.TestRunnerTestNG@63475ace</td></tr>
 <tr>
-<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valid user login successfully", "Test Buying a property"</td>
+<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "No location entered", "Search Home Invalid Scenarios"</td>
 <td></td>
-<td>80</td>
+<td>13</td>
+<td>com.runner.TestRunnerTestNG@63475ace</td></tr>
+<tr>
+<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with missing captcha", "Invalid Login Scenarios"</td>
+<td></td>
+<td>17</td>
 <td>com.runner.TestRunnerTestNG@63475ace</td></tr>
 <tr>
 <td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search and validate property listings by location", "Magicbricks Property Search"</td>
@@ -162,14 +123,29 @@ public void i_should_see_an_error_message_for_mandatory_fields() {
 <td>26</td>
 <td>com.runner.TestRunnerTestNG@63475ace</td></tr>
 <tr>
-<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify shortlisting a property from the listing results", "Shortlist property from listing page"</td>
+<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login without entering any credentials", "Invalid Login Scenarios"</td>
 <td></td>
-<td>7</td>
+<td>51</td>
 <td>com.runner.TestRunnerTestNG@63475ace</td></tr>
 <tr>
-<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with missing captcha", "Invalid Login Scenarios"</td>
+<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invalid location entered", "Search Home Invalid Scenarios"</td>
 <td></td>
-<td>17</td>
+<td>12</td>
+<td>com.runner.TestRunnerTestNG@63475ace</td></tr>
+<tr>
+<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Get the details of the property and owner successfully", "Test Buying a property"</td>
+<td></td>
+<td>0</td>
+<td>com.runner.TestRunnerTestNG@63475ace</td></tr>
+<tr>
+<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify shortlisting a property from the listing results", "Shortlist property from listing page"</td>
+<td></td>
+<td>9</td>
+<td>com.runner.TestRunnerTestNG@63475ace</td></tr>
+<tr>
+<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valid user login successfully", "Test Buying a property"</td>
+<td></td>
+<td>143</td>
 <td>com.runner.TestRunnerTestNG@63475ace</td></tr>
 </table><p>
 </body>

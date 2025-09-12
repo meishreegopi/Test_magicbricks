@@ -2,14 +2,12 @@ package com.stepDefinition;
 
 import org.testng.Assert;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
 import com.pages.HomeInteriorsPage;
 import com.setup.BaseSteps;
-import com.setup.Reporter;
 
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 
 public class HomeInteriorsSteps extends BaseSteps {
 
@@ -34,24 +32,29 @@ public class HomeInteriorsSteps extends BaseSteps {
         Assert.assertTrue(interiorsPage.clickHomeInteriors(), "Failed to click Home Interiors");
     }
 
-    @And("the user clicks on Home Interior Design Services")
-    public void the_user_clicks_on_home_interior_design_services() {
-        Assert.assertTrue(interiorsPage.clickHomeInteriorDesignServices(), "Failed to click Home Interior Design Services");
-    }
-
-    @And("the user click on select your city")
-    public void the_user_click_on_select_your_city() {
-        Assert.assertTrue(interiorsPage.clickSelectCity(), "Failed to click Select your city");
-    }
-
-    @And("the user click on ahmedabad")
-    public void the_user_click_on_ahmedabad() {
-        Assert.assertTrue(interiorsPage.clickAhmedabad(), "Failed to click Ahmedabad");
+    @And("the user clicks on Interior Designers in new delhi")
+    public void the_user_clicks_on_interior_designers_in_new_delhi() {
+        Assert.assertTrue(interiorsPage.clickInteriorDesignersDelhi(), "Failed to click Interior Designers in New Delhi");
     }
 
     @Then("the user should be displayed Home Interiors Designers page")
     public void the_user_should_be_displayed_home_interiors_designers_page() {
-        Reporter.generateReport(driver, extTest, Status.PASS,
-                "User navigated to Home Interiors Designers page for Ahmedabad.");
+        Assert.assertTrue(interiorsPage.isHomeInteriorsDesignersPageDisplayed(),
+                "Home Interiors Designers page was not displayed");
+    }
+
+    @And("the user clicks on the first designer")
+    public void the_user_clicks_on_the_first_designer() {
+        Assert.assertTrue(interiorsPage.clickFirstDesigner(), "Failed to click on first designer");
+    }
+    
+    @Then("the designer's profile page should be displayed")
+    public void the_designers_profile_page_should_be_displayed() {
+        Assert.assertTrue(interiorsPage.isDesignerProfilePageDisplayed(), "Designer's profile page was not displayed");
+    }
+
+    @And("the user clicks on the designer image")
+    public void the_user_clicks_on_the_designer_image() {
+        Assert.assertTrue(interiorsPage.clickDesignerImage(), "Failed to click on designer image");
     }
 }

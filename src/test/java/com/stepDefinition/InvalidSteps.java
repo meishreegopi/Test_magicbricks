@@ -1,7 +1,5 @@
 package com.stepDefinition;
 
-
-import java.util.Scanner;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
@@ -15,7 +13,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Invalid extends BaseSteps {
+public class InvalidSteps extends BaseSteps {
 
     InvalidLoginPage invalidLoginPage;
     ExtentTest extTest = Hooks.extTest;

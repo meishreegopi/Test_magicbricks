@@ -6,14 +6,23 @@ import com.aventstack.extentreports.ExtentTest;
 import com.pages.LoginPage;
 import com.setup.BaseSteps;
 
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Profile extends BaseSteps {
+public class ProfileSteps extends BaseSteps {
 
     LoginPage loginPage;
     ExtentTest extTest = Hooks.extTest; 
+    
+    @Before("@ValidLogin")
+    public void startBrowser() {
+        launchBrowser();
+        driver.get("https://www.magicbricks.com/");
+        System.out.println("Browser launched fresh for InvalidLogin scenario");
+    }
+
 
     @Given("I launch the magicbricks website")
     public void i_launch_the_magicbricks_website() {

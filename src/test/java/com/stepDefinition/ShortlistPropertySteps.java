@@ -7,10 +7,9 @@ import com.pages.ShortlistPropertyPage;
 import com.setup.BaseSteps;
 
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class shortlistProperty extends BaseSteps {
+public class ShortlistPropertySteps extends BaseSteps {
     ShortlistPropertyPage shortlistPage;
     ExtentTest extTest = Hooks.extTest;
 
