@@ -24,18 +24,17 @@ public class Locators {
      public static By closePropertyType = By.xpath("//*[@id=\"buy_proertyTypeDefault\"]");
      
      public static By clickBudget = By.id("rent_budget_lbl");
-     //public static By dropdownBudget = By.xpath("//*[@id=\"searchFormHolderSection\"]/section/div/div[1]/div[3]/div[3]/div[1]");
      public static By minPrice = By.xpath("//*[@id=\"budgetMin\"]");
      public static By maxPrice = By.xpath("//*[@id=\"budgetMax\"]");
      public static By closeBudget = By.xpath("//*[@id=\"rent_budget_lbl\"]");
      public static By searchButton = By.xpath("//*[@id=\"searchFormHolderSection\"]/section/div/div[1]/div[3]/div[4]");
      public static By sortBy = By.xpath("//*[@id=\"body\"]/div[5]/div/div/div[1]/div[1]/div[1]");
      public static By mostrecent = By.xpath("//*[@id=\"body\"]/div[5]/div/div/div[1]/div[1]/div/div[2]/ul/li[4]");
-     public static By shortlistButton = By.xpath("//*[@id=\"cardid80442545\"]/div/div[1]/div[2]/span[2]"); 
+     public static By shortlistButton = By.xpath("//*[@id=\"cardid81356573\"]/div/div[1]/div[2]/span[2]"); 
      public static By mainshortlistbtn = By.xpath("//*[@id=\"propertysrp\"]/div[1]/div/div/div[2]/div[5]/span");
      public static By viewShortlistBtn = By.xpath("//*[@id=\"propertysrp\"]/div[1]/div/div/div[2]/div[5]/div/div/a");
      public static By shortlistedPropertyTitle = By.xpath("//*[@id=\"cardid81061849\"]/div/div[1]/div[2]/h2");
-     public static By shortlistedPropertyCard = By.xpath("//*[@id=\"cardid80442545\"]");
+     public static By shortlistedPropertyCard = By.xpath("//*[@id=\"cardid81356573\"]");
      public static By shortlistTabHeader = By.xpath("//*[@id=\"m-tab-Shortlisted\"]");
      public static By crossloc =By.xpath("//*[@id=\"keyword_autoSuggestSelectedDiv\"]/div/div[2]");
 }

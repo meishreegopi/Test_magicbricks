@@ -16,7 +16,7 @@ import com.aventstack.extentreports.Status;
 import com.setup.Reporter;
 
 public class InvalidLocationPage {
-	// Locators
+	
 	public static By deselect = By.xpath("//*[@id=\"keyword_autoSuggestSelectedDiv\"]/div/div[2]");
 	public static By loc = By.xpath("//*[@id=\"keyword\"]");
 	public static By searchButton = By.xpath("//*[@id=\"searchFormHolderSection\"]/section/div/div[1]/div[3]/div[4]");

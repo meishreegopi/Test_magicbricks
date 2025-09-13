@@ -43,18 +43,5 @@ public class HomeInteriorsSteps extends BaseSteps {
                 "Home Interiors Designers page was not displayed");
     }
 
-    @And("the user clicks on the first designer")
-    public void the_user_clicks_on_the_first_designer() {
-        Assert.assertTrue(interiorsPage.clickFirstDesigner(), "Failed to click on first designer");
-    }
-    
-    @Then("the designer's profile page should be displayed")
-    public void the_designers_profile_page_should_be_displayed() {
-        Assert.assertTrue(interiorsPage.isDesignerProfilePageDisplayed(), "Designer's profile page was not displayed");
-    }
-
-    @And("the user clicks on the designer image")
-    public void the_user_clicks_on_the_designer_image() {
-        Assert.assertTrue(interiorsPage.clickDesignerImage(), "Failed to click on designer image");
-    }
+  
 }

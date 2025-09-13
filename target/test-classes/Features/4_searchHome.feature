@@ -2,7 +2,7 @@ Feature: Magicbricks Property Search
 
   Background: Navigate to Magicbricks home page
     Given the user is on the Magicbricks home page
-
+#TS_MB_06,TS_MB_07,TS_MB_08
   Scenario Outline: Search and validate property listings by location
     When the user enters "<location>" in the Search bar
     And the user selects Property Type from drop down
